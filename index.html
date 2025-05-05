@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            /* Removed height: 100% to allow page to grow if needed */
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            justify-content: center; /* Center horizontally */
+            align-items: center;   /* Center vertically */
+            background-color: #f0f0f0; /* Light grey background */
+            font-family: sans-serif; /* Use a common sans-serif font */
+            padding-top: 20px; /* Add some space at the top */
+            padding-bottom: 20px; /* Add some space at the bottom */
+        }
+        iframe {
+            border: none; /* Remove default iframe border */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional subtle shadow */
+            /* Ensure iframe doesn't cause horizontal scroll on small screens */
+            max-width: 100%;
+        }
+        .info-text {
+            margin-top: 20px; /* Add space between iframe and text */
+            font-size: 14px;  /* Slightly smaller text */
+            color: #555;      /* Dark grey color */
+            text-align: center; /* Center the text */
+            max-width: 640px; /* Limit width, similar to iframe */
+            padding: 0 15px;  /* Add horizontal padding for smaller screens */
+        }
+        .profile-link {
+            margin-top: 10px; /* Space above the link */
+            font-size: 14px;
+            text-align: center;
+        }
+        .profile-link a {
+            color: #0066cc; /* A standard link blue */
+            text-decoration: none; /* Remove underline by default */
+        }
+        .profile-link a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Your Iframe Embed Code -->
+    <iframe
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        height="520"
+        src="https://cdn.crichdplays.ru/embed2.php?id=starsp3"
+        name="iframe_a"
+        scrolling="no"
+        width="640"
+        allowfullscreen="true" /* Allows the player's own fullscreen button */
+        allow="autoplay; encrypted-media; picture-in-picture" /* Standard permissions */
+        >
+        Your Browser Does Not Support Iframes.
+    </iframe>
+
+    <!-- Disclaimer Text -->
+    <p class="info-text">
+        Please note: This video is embedded from an external source (iframe) and is not hosted on this server. The content displayed originates from the provider linked in the video player.
+    </p>
+
+    <!-- Reddit Profile Link -->
+    <p class="profile-link">
+        <a href="https://www.reddit.com/user/IAmUser1234567/" target="_blank" rel="noopener noreferrer">
+            My Reddit Profile (u/IAmUser1234567)
+        </a>
+    </p>
+
+</body>
+</html>
